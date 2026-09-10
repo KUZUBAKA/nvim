@@ -1,3 +1,9 @@
+local vg = vim.g
+local map = vim.keymap.set
+
+vg.mapleader = " "
+vg.maplocalleader = "\\"
+
 local map = vim.keymap.set
 
 map("n", "Y", "y$", { desc = "行末までヤンク" })
@@ -8,19 +14,19 @@ map("", "K", "")
 map("n", "<C-A-K>", vim.lsp.buf.hover)
 
 map("n", "<leader>]", function()
-  vim.cmd("bnext")
+ vim.cmd("bnext")
 end, { desc = "Next buffer" })
 
 map("n", "<leader>[", function()
-  vim.cmd("bprevious")
+ vim.cmd("bprevious")
 end, { desc = "Previous buffer" })
 
 map(
-  "n",
-  "<leader>bd",
-  function()
-    local is_no_name = vim.bo[0].filetype == nil and true or false
-    vim.api.nvim_buf_delete(0, { force = is_no_name })
-  end,
-  { desc = "Close buffer" }
+ "n",
+ "<leader>bd",
+ function()
+  local is_no_name = vim.bo[0].filetype == nil and true or false
+  vim.api.nvim_buf_delete(0, { force = is_no_name })
+ end,
+ { desc = "Close buffer" }
 )

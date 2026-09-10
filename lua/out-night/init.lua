@@ -36,7 +36,7 @@ local main_highlights = {
 
 local no_transparent_highlights = {
  CursorLine = { fg = colors.fg, bg = colors.selected },
- Visual = { fg = colors.fg, bg = colors.selected },
+ Visual = { bg = colors.selected },
  VisualNOS = { link = "Visual" },
  PmenuSel = { link = "Visual" },
 }
@@ -46,7 +46,7 @@ local blink_colors = {
 }
 
 local blink_highlights = {
- BlinkCmpMenu = { fg = colors.fg, blink_colors.bg },
+ BlinkCmpMenu = { fg = colors.fg, bg = blink_colors.bg },
  BlinkCmpLabelMatch = { fg = colors.blue },
  BlinkCmpMenuBorder = { fg = colors.blue },
  BlinkCmpMenuSelection = { fg = colors.fg, bg = colors.selected },
@@ -64,14 +64,13 @@ function M.setup(opts)
   bold = true,
   italic = true,
  }
-
  local hl = vim.tbl_extend("force", vim.api.nvim_get_hl(0, { link = false }), main_highlights)
- if opts.transparent_cmp == nil or opts.transparent_cmp then
-  hl = vim.tbl_extend('force', hl, blink_highlights)
-  opts.transparent_cmp = true
- end
 
  if opts.transparent ~= nil and opts.transparent then
+  if opts.transparent_cmp == nil or opts.transparent_cmp then
+   hl = vim.tbl_extend('force', hl, blink_highlights)
+   opts.transparent_cmp = true
+  end
   for _, h_opts in pairs(hl) do h_opts.bg = "NONE" end
  end
 

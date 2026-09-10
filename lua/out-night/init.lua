@@ -42,13 +42,13 @@ local no_transparent_highlights = {
 }
 
 local blink_colors = {
- bg = "#3c494f",
+ bg = "#323e4a",
 }
 
 local blink_highlights = {
  BlinkCmpMenu = { fg = colors.fg, bg = blink_colors.bg },
  BlinkCmpLabelMatch = { fg = colors.blue },
- BlinkCmpMenuBorder = { fg = colors.blue },
+ BlinkCmpMenuBorder = { fg = colors.blue, bg = blink_colors.bg },
  BlinkCmpMenuSelection = { fg = colors.fg, bg = colors.selected },
  BlinkCmpDoc = { link = "BlinkCmpMenu" },
  BlinkCmpDocBorder = { link = "BlinkCmpMenuBorder" },
@@ -87,7 +87,7 @@ function M.setup(opts)
  end
 
  hl = vim.tbl_extend("force", hl, no_transparent_highlights)
- if not (opts.transparent or opts.transparent_cmp) then
+ if not (opts.transparent and opts.transparent_cmp) then
   hl = vim.tbl_extend("force", hl, blink_highlights)
  end
 

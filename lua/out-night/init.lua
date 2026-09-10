@@ -87,7 +87,7 @@ function M.setup(opts)
  end
 
  hl = vim.tbl_extend("force", hl, no_transparent_highlights)
- if not opts.transparent_cmp then
+ if not (opts.transparent or opts.transparent_cmp) then
   hl = vim.tbl_extend("force", hl, blink_highlights)
  end
 

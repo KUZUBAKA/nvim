@@ -74,7 +74,7 @@ local main_highlights = {
  ["@function"] = { link = "Function" },
 
  Identifier = { fg = colors.skyblue },
- Variable = { fg = colors.skyblue },
+ Variable = { fg = colors.fg },
  ["@variable"] = { link = "Variable" },
  ["@variable.member"] = { fg = colors.yellow },
  ["@property"] = { fg = colors.yellow },
@@ -101,7 +101,8 @@ local main_highlights = {
 
  -- Lua
 
- ["@constructor.lua"] = { fg = colors.skyblue },
+ ["@constructor.lua"] = { fg = colors.fg },
+ ["@punctuation.bracket.lua"] = { fg = colors.fg },
 
  -- Markdown
 
@@ -119,7 +120,6 @@ local main_highlights = {
  ["@markup.raw.block"] = { fg = colors.green_light },
  ["@markup.raw.markdown_inline"] = { fg = colors.green_light },
  ["@punctuation.special.markdown"] = { fg = colors.pink },
-
 }
 
 local no_transparent_highlights = {
@@ -128,6 +128,8 @@ local no_transparent_highlights = {
  VisualNOS = { link = "Visual" },
  PmenuSel = { link = "CursorLine" },
  SnacksPickerListCursorLine = { link = "PmenuSel" },
+
+ StatusLine = { fg = colors.skyblue_light, bg = "NONE" },
 
  WinBar      = { fg = colors.skyblue_light, bg = "NONE" },
  WinBarNC    = { fg = colors.blue_gray,     bg = "NONE" },

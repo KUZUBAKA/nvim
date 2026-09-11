@@ -8,6 +8,6 @@ require("out-night").setup({
  bold = false,
  italic = false,
  underline = false,
- transparent = false,
+ transparent = true,
  transparent_cmp = true,
 })

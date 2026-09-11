@@ -3,53 +3,158 @@ local M = {}
 local colors = {
  fg = "#d3dde0",
  bg = "#081620",
- selected = "#293241",
+ cursor_line = "#293241",
+ selected = "#0046b1",
 
  blue = "#4870d5",
+ blue_light = "#579ee5",
  blue_dark = "#1b3681",
+ blue_gray = "#353e43",
 
- yellow = "#fee404",
+ navy = "#343b56",
+
+ skyblue = "#5eb0ee",
+ skyblue_light = "#92c5ef",
+
+ magenta = "#bd8dfe",
+
+ red = "#e9444d",
+ red_light = "#d75154",
+
+ pink = "#ff649f",
+
+ yellow = "#f6e467",
  orange = "#e4a035",
+ orange_dark = "#e97e4f",
 
  green = "#71d29d",
+ green_light = "#8df1a6",
 }
 
 local main_highlights = {
- Normal = { fg = colors.fg, bg = colors.bg },
- NormalNC = { link = "Normal" },
-
+ Normal = { fg = colors.fg, bg = colors.bg }, NormalNC = { link = "Normal" },
  LineNr = { fg = colors.blue },
  LineNrAbove = { link = "LineNr" },
  LineNrBelow = { link = "LineNr" },
  CursorLineNr = { fg = colors.yellow },
+
+ FloatBorder = { fg = colors.blue },
 
  FlashLabel = { fg = colors.yellow },
  FlashMatch = { fg = colors.blue },
  FlashCurrent = { link = "FlashMatch" },
  FlashBackdrop = { fg = colors.green_light },
 
- --
- -- NoiceCmdLinePopup             = { link = "Pmenu" },
- -- NoiceCmdLinePopupBorder       = { fg = colors.blue, bg = colors.gray_dark },
- -- NoiceCmdlinePopupBorderSearch = { fg = colors.yellow, bg = colors.gray_dark },
+ NoiceCmdLinePopupBorder = { fg = colors.blue },
+ NoiceCmdlinePopupBorderSearch = { fg = colors.yellow },
+
+ WinSeparator = { fg = colors.blue },
+ Folded = { bg = "NONE" },
+
+ -- # Text Colors
+
+ Comment = { fg = colors.pink },
+ ["@comment"] = { link = "Comment" },
+
+ Boolean = { fg = colors.blue_light },
+ ["@boolean"] = { link = "Boolean" },
+
+ Number = { fg = colors.fg },
+ Float = { fg = colors.fg },
+ ["@number"] = { link = "Number" },
+ ["@number.float"] = { link = "Float" },
+
+ Statement = { fg = colors.magenta },
+ Keyword = { fg = colors.magenta },
+ Include = { fg = colors.magenta },
+ ["@keyword"] = { link = "Keyword" },
+ ["@keyword.coroutine"] = { fg = colors.magenta },
+
+ Function = { fg = colors.red },
+ ["@function"] = { link = "Function" },
+
+ Identifier = { fg = colors.skyblue },
+ Variable = { fg = colors.skyblue },
+ ["@variable"] = { link = "Variable" },
+ ["@variable.member"] = { fg = colors.yellow },
+ ["@property"] = { fg = colors.yellow },
+
+ String = { fg = colors.green_light },
+ ["@string"] = { link = "String" },
+
+ Type = { fg = colors.blue_dark },
+ Special = { fg = colors.green_light },
+
+ Tag = { fg = colors.yellow },
+ ["@tag"] = {link = "Tag"},
+ ["@tag.attribute.html"] = { fg = colors.skyblue },
+
+ -- Rust
+
+ ["@module.rust"] = { fg = colors.blue },
+ ["@lsp.type.namespace.rust"] = { fg = colors.blue },
+ ["@lsp.type.attributeBracket.rust"] = {fg = colors.blue_gray},
+ ["@lsp.mod.attribute.rust"] = {link = "@lsp.type.attributeBracket.rust"},
+ ["@lsp.type.string.rust"] = {fg = colors.skyblue},
+ ["@lsp.typemod.string.macro.rust"] = {fg = colors.skyblue},
+ ["@lsp.typemod.string.procMacro"] = {fg = colors.skyblue},
+
+ -- Lua
+
+ ["@constructor.lua"] = { fg = colors.skyblue },
+
+ -- Markdown
+
+ ["@markup.heading.1"] = { fg = colors.pink },
+ ["@markup.heading.2"] = { fg = colors.red },
+ ["@markup.heading.3"] = { fg = colors.orange },
+ ["@markup.heading.4"] = { fg = colors.skyblue },
+ ["@markup.heading.5"] = { fg = colors.blue },
+ ["@markup.heading.6"] = { fg = colors.magenta },
+ ["@markup.italic"] = { fg = colors.yellow },
+ ["@markup.strong"] = { fg = colors.red_light },
+ ["@markup.link.label.markdown_inline"] = { fg = colors.orange_dark },
+ ["@markup.link.bracket"] = { link = "@markup.link.label.markdown_inline" },
+ ["@markup.list"] = { fg = colors.skyblue_light },
+ ["@markup.raw.block"] = { fg = colors.green_light },
+ ["@markup.raw.markdown_inline"] = { fg = colors.green_light },
+ ["@punctuation.special.markdown"] = { fg = colors.pink },
+
 }
 
 local no_transparent_highlights = {
- CursorLine = { fg = colors.fg, bg = colors.selected },
+ CursorLine = { bg = colors.cursor_line },
  Visual = { bg = colors.selected },
  VisualNOS = { link = "Visual" },
- PmenuSel = { link = "Visual" },
+ PmenuSel = { link = "CursorLine" },
+ SnacksPickerListCursorLine = { link = "PmenuSel" },
+
+ WinBar = { fg = colors.skyblue_light, bg = "NONE" },
+ WinBarNC = { fg = colors.skyblue_light, bg = "NONE" },
+ WinBarFP = { fg = colors.skyblue_light, bg = colors.bg },
+ WinBarFPSep = { fg = colors.blue, bg = "NONE" },
+
+ HlDiagnostics = { fg = colors.skyblue_light, bg = colors.blue_dark },
+ HlSelChars = { fg = colors.skyblue_light, bg = colors.nevy },
+ HlChars = { fg = colors.skyblue_light, bg = colors.nevy },
+ HlCursorPos = { fg = colors.skyblue_light, bg = colors.nevy },
+ HlDate = { fg = colors.skyblue_light, bg = colors.green },
+ HlDiagnosticsSep = { fg = colors.blue_dark, bg = colors.nevy },
+ HlSelCharsSep = { fg = colors.skyblue_dark, bg = colors.nevy },
+ HlCharsSep = { fg = colors.nevy, bg = colors.nevy },
+ HlCursorPosSep = { fg = colors.nevy, bg = "NONE" },
+ HlSepDate = { fg = colors.green, bg = "NONE" },
 }
 
 local blink_colors = {
- bg = "#323e4a",
+ bg = "#1b2a38",
 }
 
 local blink_highlights = {
  BlinkCmpMenu = { fg = colors.fg, bg = blink_colors.bg },
  BlinkCmpLabelMatch = { fg = colors.blue },
  BlinkCmpMenuBorder = { fg = colors.blue, bg = blink_colors.bg },
- BlinkCmpMenuSelection = { fg = colors.fg, bg = colors.selected },
+ BlinkCmpMenuSelection = { link = "CursorLine" },
  BlinkCmpDoc = { link = "BlinkCmpMenu" },
  BlinkCmpDocBorder = { link = "BlinkCmpMenuBorder" },
 }

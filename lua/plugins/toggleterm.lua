@@ -30,6 +30,7 @@ return {
   start_in_insert = true,
   close_on_exit = true,
   direction = "float",
+  float_opts = { border = "curved" },
   on_open = function(term)
    vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<Esc>", "<c-\\><c-n>", { noremap = true, silent = true })
   end,

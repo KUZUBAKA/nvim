@@ -31,8 +31,6 @@ return {
    require("lang-settings.rust_analyzer")()
    require("lang-settings.emment_language_server")()
    require("lang-settings.gdscript")()
-   require("lang-settings.minecraft").setup()
-   require("lang-settings/bedrock_ls")()
 
    vim.lsp.enable("lua_ls")
    vim.lsp.enable("jsonls")
@@ -48,7 +46,6 @@ return {
    vim.lsp.enable("ts_ls")
    vim.lsp.enable("ruby_lsp")
    vim.lsp.enable("gdscript")
-   vim.lsp.enable("bedrock_ls")
    vim.lsp.enable("sqlls")
   end,
  },

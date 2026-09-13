@@ -26,7 +26,6 @@ return {
    })
 
    require("lang-settings.lua_ls")()
-   require("lang-settings.jsonls")()
    require("lang-settings.yamlls")()
    require("lang-settings.rust_analyzer")()
    require("lang-settings.emment_language_server")()

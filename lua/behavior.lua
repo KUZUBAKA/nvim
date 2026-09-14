@@ -10,8 +10,20 @@ vim.opt.fixeol = false
 vim.opt.conceallevel = 0
 vim.opt.fileformats = { "unix", "dos" }
 
+-- Minecraft Addon For FileType Set
+
 vim.filetype.add({ extension = { mcfunction = "mcfunction" } })
 vim.filetype.add({ extension = { lang = "lang" } })
+
+vim.api.nvim_create_autocmd("FileType", {
+ pattern = "mcfunction",
+ callback = function() vim.bo.commentstringt = "# %s" end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+ pattern = "lang",
+ callback = function() vim.bo.commentstringt = "# %s" end,
+})
 
 -- Indent Format
 vim.api.nvim_create_autocmd("BufWritePre", {

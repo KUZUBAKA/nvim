@@ -1,5 +1,8 @@
 local dir = vim.fn.stdpath("data") .. "/bedrock-schemas"
-local base = "file://" .. dir ""
+if not vim.uv.fs_stat(dir) then
+ vim.fn.system({ "git", "clone", "--depth", "1", "https://github.com/Blockception/Minecraft-bedrock-json-schemas.git", dir })
+end
+local base = "file://" .. dir "/"
 
 local list = {
  { "general/manifest.json", { "manifest.json" } },

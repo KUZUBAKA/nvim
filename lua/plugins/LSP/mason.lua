@@ -30,6 +30,7 @@ return {
    require("lang-settings.jsonls")()
    require("lang-settings.rust_analyzer")()
    require("lang-settings.emment_language_server")()
+   require("lang-settings.ts_ls")()
    require("lang-settings.gdscript")()
 
    vim.lsp.enable("lua_ls")

@@ -4,3 +4,6 @@ local cmd = { "npm", "install", "--prefix", dir, "--no-package-lock", "--no-fund
 if not vim.uv.fs_stat(dir) then
  vim.fn.system(cmd)
 end
+
+return function()
+end

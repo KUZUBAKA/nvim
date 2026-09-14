@@ -1,4 +1,5 @@
-local base = "https://raw.githubusercontent.com/Blockception/Minecraft-bedrock-json-schemas/main/"
+local dir = vim.fn.stdpath("data") .. "/bedrock-schemas"
+local base = "file://" .. dir ""
 
 local list = {
  { "general/manifest.json", { "manifest.json" } },

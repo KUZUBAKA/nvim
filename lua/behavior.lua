@@ -22,7 +22,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.api.nvim_create_autocmd("FileType", {
  pattern = "lang",
- callback = function() vim.bo.commentstring = "# %s" end,
+ callback = function() vim.bo.commentstring = "## %s" end,
 })
 
 -- Indent Format

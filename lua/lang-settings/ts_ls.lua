@@ -7,6 +7,6 @@ end
 
 return function()
  vim.lsp.config("ts_ls", {
-  cmd = { dir .. "/node_modules/.bin/typescript-language-server", " --stdio" },
+  cmd = { dir .. "/node_modules/.bin/typescript-language-server", "--stdio" },
  })
 end

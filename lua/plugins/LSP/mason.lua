@@ -19,7 +19,6 @@ return {
      "html",
      "emmet_language_server",
      "cssls",
-     "ts_ls",
      "ruby_lsp",
      "sqlls",
     },

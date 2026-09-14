@@ -33,6 +33,13 @@ if not vim.uv.fs_stat(dir .. "/node_modules/@minecraft") then
  vim.fn.system(api)
 end
 
+local conf = { '{ "compilerOptions": { "paths": { "@minecraft/*": ["' .. dir .. '/node_modules/@minecraft/*"] } } }' }
+local root = vim.fn.getcwd()
+
+if #vim.fs.find("manifest.json", { path = root, limit = 1 }) > 0 and not vim.uv.fs_stat(root .. "/jsconfig.json") then
+ vim.fn.writefile(conf, root .. "/jsconfig.json")
+end
+
 return function()
  vim.lsp.config("ts_ls", {
   cmd = { dir .. "/node_modules/.bin/typescript-language-server", "--stdio" },

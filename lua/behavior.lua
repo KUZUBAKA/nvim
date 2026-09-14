@@ -10,6 +10,9 @@ vim.opt.fixeol = false
 vim.opt.conceallevel = 0
 vim.opt.fileformats = { "unix", "dos" }
 
+vim.filetype.add({ extension = { mcfunction = "mcfunction" } })
+vim.filetype.add({ extension = { lang = "lang" } })
+
 -- Indent Format
 vim.api.nvim_create_autocmd("BufWritePre", {
  callback = function()

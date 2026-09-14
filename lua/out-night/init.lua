@@ -181,6 +181,8 @@ local blink_highlights = {
  BlinkCmpMenuSelection = { link = "CursorLine" },
  BlinkCmpDoc = { link = "BlinkCmpMenu" },
  BlinkCmpDocBorder = { link = "BlinkCmpMenuBorder" },
+
+ SnippetTabstop = { bg = "NONE" },
 }
 
 function M.setup(opts)

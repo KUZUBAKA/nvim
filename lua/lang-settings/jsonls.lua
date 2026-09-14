@@ -2,7 +2,7 @@ local dir = vim.fn.stdpath("data") .. "/bedrock-schemas"
 if not vim.uv.fs_stat(dir) then
  vim.fn.system({ "git", "clone", "--depth", "1", "https://github.com/Blockception/Minecraft-bedrock-json-schemas.git", dir })
 end
-local base = "file://" .. dir "/"
+local base = "file://" .. dir .. "/"
 
 local list = {
  { "general/manifest.json", { "manifest.json" } },
@@ -71,8 +71,10 @@ local list = {
 return function()
  local schemas = {}
 
- for _, v in ipairs(list) do
-  schemas[#schemas + 1] = { url = base .. v[1], fileMatch = v[2] }
+ if #vim.fs.find("manifest.json", { path = vim.fn.getcwd(), limit = 1 }) > 0 then
+  for _, v in ipairs(list) do
+   schemas[#schemas + 1] = { url = base .. v[1], fileMatch = v[2] }
+  end
  end
 
  vim.lsp.config("jsonls", {

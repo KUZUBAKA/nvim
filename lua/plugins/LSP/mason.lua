@@ -31,6 +31,7 @@ return {
    require("lang-settings.emment_language_server")()
    require("lang-settings.ts_ls")()
    require("lang-settings.gdscript")()
+   require("lang-settings.bedrock")()
 
    vim.lsp.enable("lua_ls")
    vim.lsp.enable("jsonls")

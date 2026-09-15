@@ -1,5 +1,9 @@
 local dir = vim.fn.stdpath("data") .. "/bedrock-lsp"
 local url = "https://github.com/Blockception/minecraft-bedrock-language-server/releases/latest/download/vscode-extension.vsix"
+local ids = {
+ mcfunction = "bc-mcfunction",
+ lang = "bc-minecraft-language",
+}
 
 if not vim.uv.fs_stat(dir) then
  vim.fn.system({ "curl", "-sL", "--create-dirs", "-o", dir .. "/vscode-extension.vsix", url })

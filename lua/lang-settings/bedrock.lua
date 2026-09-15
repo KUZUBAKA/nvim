@@ -10,5 +10,7 @@ end
 return function()
  vim.lsp.config("bedrock", {
   cmd = { "node", dir .. "/extension/lsp/server.js", "--stdio" },
+  filetypes = { "mcfunction", "lang" },
+  root_markers = { ".mclint", "manifest.json", ".git" },
  })
 end

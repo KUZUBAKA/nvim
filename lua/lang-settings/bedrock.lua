@@ -8,7 +8,7 @@ if not vim.uv.fs_stat(dir) then
 end
 
 return function()
- vim.lsp.config("bedroock", {
-  cmd = { "node", dir .. "/extention/lsp/server.js", "--stdio" },
+ vim.lsp.config("bedrock", {
+  cmd = { "node", dir .. "/extension/lsp/server.js", "--stdio" },
  })
 end

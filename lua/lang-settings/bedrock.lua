@@ -16,5 +16,6 @@ return function()
   cmd = { "node", dir .. "/extension/lsp/server.js", "--stdio" },
   filetypes = { "mcfunction", "lang" },
   root_markers = { ".mclint", "manifest.json", ".git" },
+  get_language_id = function(_, ft) return ids[ft] end,
  })
 end

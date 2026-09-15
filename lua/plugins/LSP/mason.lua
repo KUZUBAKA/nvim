@@ -47,6 +47,7 @@ return {
    vim.lsp.enable("ts_ls")
    vim.lsp.enable("ruby_lsp")
    vim.lsp.enable("gdscript")
+   vim.lsp.enable("bedrock")
    vim.lsp.enable("sqlls")
   end,
  },

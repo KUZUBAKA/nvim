@@ -11,6 +11,8 @@ local colors = {
  blue_dark = "#1b3681",
  blue_gray = "#353e43",
 
+ gray = "#565c61",
+
  navy = "#343b56",
 
  skyblue = "#5eb0ee",
@@ -108,7 +110,7 @@ local main_highlights = {
  ["@function.macro.rust"] = { link = "Function" }, 
  ["@lsp.type.macro.rust"] = { link = "Function" },
  ["@lsp.type.namespace.rust"] = { fg = colors.blue },
- ["@lsp.type.attributeBracket.rust"] = {fg = colors.blue_gray},
+ ["@lsp.type.attributeBracket.rust"] = {fg = colors.gray},
  ["@lsp.mod.attribute.rust"] = {link = "@lsp.type.attributeBracket.rust"},
  -- ["@lsp.type.string.rust"] = {fg = colors.skyblue},
  -- ["@lsp.typemod.string.macro.rust"] = {fg = colors.skyblue},

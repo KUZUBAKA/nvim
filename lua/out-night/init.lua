@@ -105,12 +105,13 @@ local main_highlights = {
  -- Rust
 
  ["@module.rust"] = { fg = colors.blue },
+ ["@function.macro.rust"] = { link = "Function" }, 
  ["@lsp.type.namespace.rust"] = { fg = colors.blue },
  ["@lsp.type.attributeBracket.rust"] = {fg = colors.blue_gray},
  ["@lsp.mod.attribute.rust"] = {link = "@lsp.type.attributeBracket.rust"},
- ["@lsp.type.string.rust"] = {fg = colors.skyblue},
- ["@lsp.typemod.string.macro.rust"] = {fg = colors.skyblue},
- ["@lsp.typemod.string.procMacro"] = {fg = colors.skyblue},
+ -- ["@lsp.type.string.rust"] = {fg = colors.skyblue},
+ -- ["@lsp.typemod.string.macro.rust"] = {fg = colors.skyblue},
+ -- ["@lsp.typemod.string.procMacro"] = {fg = colors.skyblue},
 
  -- Lua
 

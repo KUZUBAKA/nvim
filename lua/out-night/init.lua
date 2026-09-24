@@ -106,6 +106,7 @@ local main_highlights = {
 
  ["@module.rust"] = { fg = colors.blue },
  ["@function.macro.rust"] = { link = "Function" }, 
+ ["@lsp.type.macro.rust"] = { link = "Function" },
  ["@lsp.type.namespace.rust"] = { fg = colors.blue },
  ["@lsp.type.attributeBracket.rust"] = {fg = colors.blue_gray},
  ["@lsp.mod.attribute.rust"] = {link = "@lsp.type.attributeBracket.rust"},

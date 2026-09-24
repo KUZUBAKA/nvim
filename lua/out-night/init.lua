@@ -95,7 +95,7 @@ local main_highlights = {
  String = { fg = colors.green_light },
  ["@string"] = { link = "String" },
 
- Type = { fg = colors.blue_dark },
+ Type = { fg = colors.blue },
  Special = { fg = colors.green_light },
 
  Tag = { fg = colors.yellow },

@@ -16,6 +16,7 @@ return {
      "intelephense",
      "lemminx",
      "rust_analyzer",
+     "taplo",
      "html",
      "emmet_language_server",
      "cssls",
@@ -41,6 +42,7 @@ return {
    vim.lsp.enable("intelephense")
    vim.lsp.enable("lemminx")
    vim.lsp.enable("rust_analyzer")
+   vim.lsp.enable("taplo")
    vim.lsp.enable("html")
    vim.lsp.enable("cssls")
    vim.lsp.enable("emmet_language_server")

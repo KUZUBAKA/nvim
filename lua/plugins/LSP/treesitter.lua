@@ -1,9 +1,6 @@
 return {
- "neovim-treesitter/nvim-treesitter",
- dependencies = {
-  "nvim-lua/plenary.nvim",
-  "neovim-treesitter/treesitter-parser-registry",
- },
+ "nvim-treesitter/nvim-treesitter",
+ branch = "main",
  lazy = false,
  build = ":TSUpdate",
  config = function()

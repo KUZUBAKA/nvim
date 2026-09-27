@@ -3,9 +3,9 @@ return function()
   settings = {
    ["rust-analyzer"] = {
     inlayHints = {
-     typeHints = { enable = true },
+     typeHints = { enable = false },
      parameterHints = { enable = false },
-     chainingHints = { enable = true },
+     chainingHints = { enable = false },
     },
     procMacro = {
      enable = true,
@@ -35,11 +35,11 @@ return function()
       "unused_mut",
      },
     },
-    -- lspMux = {
-    --  version = "1",
-    --  method = "connect",
-    --  server = "rust-analyzer",
-    -- },
+    lspMux = {
+     version = "1",
+     method = "connect",
+     server = "rust-analyzer",
+    },
    },
   },
  })

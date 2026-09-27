@@ -6,7 +6,7 @@ local colors = {
  cursor_line = "#293241",
  selected = "#0046b1",
 
- blue = "#4870d5",
+ blue = "#4080ff",
  blue_light = "#579ee5",
  blue_dark = "#1b3681",
  blue_gray = "#353e43",
@@ -17,6 +17,7 @@ local colors = {
 
  skyblue = "#5eb0ee",
  skyblue_light = "#92c5ef",
+
 
  magenta = "#bd8dfe",
 
@@ -31,6 +32,7 @@ local colors = {
 
  green = "#71d29d",
  green_light = "#8df1a6",
+ green_verylight = "#b3e500",
 }
 
 local main_highlights = {
@@ -74,6 +76,7 @@ local main_highlights = {
  Boolean = { fg = colors.blue_light },
  ["@boolean"] = { link = "Boolean" },
 
+ Constant = { fg = colors.green_verylight },
  Number = { fg = colors.fg },
  Float = { fg = colors.fg },
  ["@number"] = { link = "Number" },
@@ -89,7 +92,7 @@ local main_highlights = {
  ["@function"] = { link = "Function" },
 
  Identifier = { fg = colors.skyblue },
- Variable = { fg = colors.fg },
+ Variable = { fg = colors.skyblue_light },
  ["@variable"] = { link = "Variable" },
  ["@variable.member"] = { fg = colors.yellow },
  ["@property"] = { fg = colors.yellow },

@@ -13,6 +13,7 @@ return function()
     },
     diagnostics = {
      enable = true,
+     disabled = { "inactive_code", },
     },
     completion = {
      autoimport = { enable = false },

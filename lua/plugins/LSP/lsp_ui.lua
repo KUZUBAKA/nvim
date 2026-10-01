@@ -6,7 +6,7 @@ return {
   { "<leader>lr", "<cmd>LspUI rename<cr>", desc = "Rename" },
   { "<C-A-k>", "<cmd>LspUI hover<cr>", desc = "型情報や作者情報を確認" },
   { "<C-A-f>", "<cmd>LspUI definition<cr>", desc = "関数の処理を確認" },
-  { "<C-A-h>", "<cmd>LspUI implementation<cr>", desc = "トレイトの処理を確認" },
+  { "<C-A-s>", "<cmd>LspUI implementation<cr>", desc = "トレイトの処理を確認" },
  },
  opts = {
   inlay_hint = {

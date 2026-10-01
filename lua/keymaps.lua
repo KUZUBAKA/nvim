@@ -11,7 +11,7 @@ map("n", "y<C-a>", "<cmd>%y<cr>", { desc = "ファイル全体のコピー" })
 map("i", "<Esc>", "<Space><BS><Esc>")
 map("i", "<CR>", "<Space><BS><CR>")
 map("", "K", "")
-map("n", "<C-A-K>", vim.lsp.buf.hover)
+-- map("n", "<C-A-K>", vim.lsp.buf.hover)
 
 map("n", "<leader>]", function()
  vim.cmd("bnext")

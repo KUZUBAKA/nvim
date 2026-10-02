@@ -23,7 +23,7 @@ local hints = {
  update = { "DiagnosticChanged", "BufEnter" },
  provider = function()
   local count = vim.diagnostic.count(0)
-  return "" .. (count[vim.diagnostic.severity.HINT] or 0)
+  return "" .. (count[vim.diagnostic.severity.HINT] or 0) .. " "
  end
 }
 

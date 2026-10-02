@@ -8,7 +8,7 @@ local left_block = {
  -- com.current_mode,
  { hl = "HlFilePath", com.file_path },
  { hl = "HlSepFPR",   provider = sep.right_thin },
- { hl = "HlFileType", { whitespace, com.file_devicon } },
+ { hl = "HlFileType", { whitespace, com.file_devicon, utils.clone(whitespace) } },
  { hl = "HlFileType", { com.file_type, utils.clone(whitespace), } },
  { hl = "HlSepFTR",   provider = sep.right_filled },
  align,

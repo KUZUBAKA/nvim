@@ -8,7 +8,7 @@ vo.relativenumber = true
 vo.wrap = true
 
 -- 現カーソルの行のハイライト 有効/無効
-vo.cursorline = true
+vo.cursorline = false
 
 -- 検索ヒット文字のハイライト 有効/無効
 vo.hlsearch = false

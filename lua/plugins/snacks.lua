@@ -69,7 +69,8 @@ return {
    enabled = true,
    style = "compact",
    filter = function (notif)
-    return not notif.msg:find("request handler");
+    return not notif.msg:find("request handler", 1, true)
+     and not (notif.level == "info" and notif.msg:find("[LspUI]: ", 1, true) == 1)
    end
   },
   input = { enabled = true },
@@ -78,13 +79,13 @@ return {
   rename = { enabled = true },
   zen = { enabled = true },
   -- terminal = {
-   -- 	enabled = true,
-   -- 	start_insert = true,
-   -- 	auto_close = true,
-   -- 	win = {
-    -- 		position = "float",
-    -- 		border = "rounded",
-    -- 	},
-    -- },
-   },
-  }
+  -- 	enabled = true,
+  -- 	start_insert = true,
+  -- 	auto_close = true,
+  -- 	win = {
+  -- 		position = "float",
+  -- 		border = "rounded",
+  -- 	},
+  -- },
+ },
+}

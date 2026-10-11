@@ -6,7 +6,7 @@ local colors = {
  cursor_line = "#293241",
  selected = "#0046b1",
 
- blue = "#4080ff",
+ blue = "#5482da",
  blue_light = "#579ee5",
  blue_dark = "#1b3681",
  blue_gray = "#353e43",
@@ -113,7 +113,7 @@ local main_highlights = {
  ["@function.macro.rust"] = { link = "Function" }, 
  ["@lsp.type.macro.rust"] = { link = "Function" },
  ["@lsp.type.namespace.rust"] = { fg = colors.blue },
- ["@lsp.type.attributeBracket.rust"] = {fg = colors.gray},
+ ["@lsp.type.attributeBracket.rust"] = {fg = colors.green_verylight},
  ["@lsp.mod.attribute.rust"] = {link = "@lsp.type.attributeBracket.rust"},
  -- ["@lsp.type.string.rust"] = {fg = colors.skyblue},
  -- ["@lsp.typemod.string.macro.rust"] = {fg = colors.skyblue},

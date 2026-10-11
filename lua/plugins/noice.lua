@@ -21,5 +21,6 @@ return {
     ["vim.lsp.util.stylize_markdown"]                = false,
    },
   },
+  opts = { skip = true },
  }
 }

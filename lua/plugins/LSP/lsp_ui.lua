@@ -1,4 +1,5 @@
 return {
+ enabled = false,
  "jinzhongjia/LspUI.nvim",
  branch = "main",
  event = "LspAttach",

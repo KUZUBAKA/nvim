@@ -13,6 +13,14 @@ map("i", "<CR>", "<Space><BS><CR>")
 map("", "K", "")
 -- map("n", "<C-A-K>", vim.lsp.buf.hover)
 
+map("n", "<C-A-f>", function()
+ vim.lsp.buf.definition({ on_list = jump_first })
+end, { desc = "ファイル全体のコピー" })
+
+map("n", "<C-A-s>", function()
+ vim.lsp.buf.implementation({ on_list = jump_first })
+end, { desc = "ファイル全体のコピー" })
+
 map("n", "<leader>]", function()
  vim.cmd("bnext")
 end, { desc = "Next buffer" })

@@ -20,4 +20,9 @@ return {
    require("fidget").setup({})
   end
  },
+ {
+  "andersevenrud/nvim_context_vt",
+  dependencies = { "nvim-treesitter/nvim-treesitter" },
+  opts = { prefix = "<- " },
+ }
 }

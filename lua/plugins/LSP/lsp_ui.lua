@@ -12,9 +12,9 @@ return {
  opts = {
   inlay_hint = {
    enable = true,
-   -- filter = {
-   --  whitelist = { "rust" },
-   -- }
+   filter = {
+    whitelist = { "rust" },
+   }
   },
   rename = {
    enable = true,

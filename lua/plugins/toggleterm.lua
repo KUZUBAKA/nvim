@@ -4,7 +4,12 @@ return {
   {
    "<leader>tt",
    function()
-    require("toggleterm").toggle()
+    local count = vim.v.count
+    if count == 0 then
+     require("toggleterm").toggle()
+    else
+     vim.cmd(count .. "ToggleTerm")
+    end
    end,
    desc = "Toggle term",
   },

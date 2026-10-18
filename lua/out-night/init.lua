@@ -37,30 +37,30 @@ local colors = {
 
 local main_highlights = {
  Normal = { fg = colors.fg, bg = colors.bg }, NormalNC = { link = "Normal" },
- LineNr = { fg = colors.blue },
+ LineNr = { fg = colors.orange_dark },
  LineNrAbove = { link = "LineNr" },
  LineNrBelow = { link = "LineNr" },
  CursorLineNr = { fg = colors.yellow },
  PmenuSel = { fg = colors.fg },
 
- FloatBorder = { fg = colors.blue },
+ FloatBorder = { fg = colors.magenta },
 
  FlashLabel = { fg = colors.yellow },
- FlashMatch = { fg = colors.blue },
+ FlashMatch = { fg = colors.skyblue_light },
  FlashCurrent = { link = "FlashMatch" },
  FlashBackdrop = { fg = colors.green_light },
 
  SnacksPickerListCursorLine    = { link = "PmenuSel" },
- SnacksPickerMatch             = { fg = colors.blue },
+ SnacksPickerMatch             = { fg = colors.skyblue_light },
  SnacksPickerUndoAdded         = { fg = colors.fg, bg = "NONE" },
  SnacksPickerUndoRemoved       = { fg = colors.fg, bg = "NONE" },
  SnacksPickerUndoSaved         = { fg = "NONE", bg = "NONE" },
  SnacksPickerUndoCurrent       = { fg = colors.fg, bg = "NONE" },
- SnacksDashboardIcon           = { fg = colors.skyblue },
- SnacksDashboardDesc           = { fg = colors.skyblue },
+ SnacksDashboardIcon           = { fg = colors.green_light },
+ SnacksDashboardDesc           = { fg = colors.green_light },
  SnacksDashboardKey            = { fg = colors.red },
  SnacksDashboardHeader         = { fg = colors.yellow },
- SnacksDashboardFooter         = { fg = colors.skyblue },
+ SnacksDashboardFooter         = { fg = colors.green_light },
 
  NoiceCmdLinePopupBorder = { fg = colors.blue },
  NoiceCmdlinePopupBorderSearch = { fg = colors.yellow },

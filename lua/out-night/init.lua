@@ -6,7 +6,7 @@ local colors = {
  cursor_line = "#293241",
  selected = "#0046b1",
 
- blue = "#5482da",
+ blue = "#6082ed",
  blue_light = "#579ee5",
  blue_dark = "#1b3681",
  blue_gray = "#353e43",

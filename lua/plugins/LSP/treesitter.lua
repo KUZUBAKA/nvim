@@ -40,6 +40,9 @@ return {
  {
   "mrxiaozhuox/dioxus.nvim",
   dependencies = { "nvim-treesitter/nvim-treesitter" },
+  init = function()
+   vim.env.USERPROFILE = vim.env.USERPROFILE or vim.env.HOME
+  end,
   ft = "rust",
   opts = {
    format = {

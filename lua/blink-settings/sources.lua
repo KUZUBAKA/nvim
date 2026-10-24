@@ -15,7 +15,7 @@ return {
    end
   end
 
-  return { "lazydev", "lsp", "path", "snippets", "buffer" }
+  return { "lazydev", "lsp", "path", "snippets", "buffer", "ripgrep" }
  end,
  providers = {
   buffer = {
@@ -43,6 +43,14 @@ return {
      return vim.fn.getcwd()
     end
    }
-  }
+  },
+  ripgrep = {
+   module = "blink-ripgrep",
+   name = "Ripgrep",
+   -- see the full configuration below for all available options
+   ---@module "blink-ripgrep"
+   ---@type blink-ripgrep.Options
+   opts = {},
+  },
  },
 }

@@ -7,6 +7,10 @@ return
   {
    "saghen/blink.cmp",
    version = "1.*",
+   dependencies = {
+    "mikavilpas/blink-ripgrep.nvim",
+    version = "*", -- use the latest stable version
+   },
    build = "cargo build --release",
    event = { "InsertEnter", "CmdlineEnter" },
    opts = {

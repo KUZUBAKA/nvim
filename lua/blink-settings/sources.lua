@@ -1,22 +1,16 @@
 return {
  default = function()
-  local no_buffer_filetypes = {
-   "yaml",
-   "json",
-   "plaintext",
-   "markdown",
-  }
-
   local current_filetype = vim.bo.filetype
 
-  if vim.tbl_contains(no_buffer_filetypes, current_filetype) then
-   if current_filetype == "markdown" or current_filetype == "plaintext" then
-    return { "snippets" }
-   end
+  if current_filetype == "markdown" or current_filetype == "plaintext" then
+   return { "snippets" }
   end
 
-  return { "lazydev", "lsp", "path", "snippets", "buffer" }
+  return { "lsp", "path", "snippets", "buffer" }
  end,
+ per_filetype = {
+  lua = { inherit_defaults = true, "lazydev" },
+ },
  providers = {
   buffer = {
    transform_items = function(_, items)

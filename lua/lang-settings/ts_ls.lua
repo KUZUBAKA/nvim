@@ -11,7 +11,7 @@ local cmd = {
  "typescript-language-server",
 }
 
-if not vim.uv.fs_stat(dir) then
+if not vim.uv.fs_stat(dir .. "/node_modules/.bin/typescript-language-server") then
  vim.fn.system(cmd)
 end
 

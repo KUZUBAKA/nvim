@@ -8,6 +8,7 @@
   "code_runner.nvim": { "branch": "main", "commit": "ae11f6cb469ee5547cd0e076ecb41d74a7322cb8" },
   "crates.nvim": { "branch": "main", "commit": "7039bc1d130e424232a7aa64ceddb170a154ff5b" },
   "dial.nvim": { "branch": "master", "commit": "f2634758455cfa52a8acea6f142dcd6271a1bf57" },
+  "dioxus.nvim": { "branch": "main", "commit": "311558c09951da3c23d8feb830c48629cdb42db4" },
   "fidget.nvim": { "branch": "main", "commit": "9e0201673e08e997e7cf52afca5565c70bd117f3" },
   "flash.nvim": { "branch": "main", "commit": "5f0f270fdc7c5b0c21d903ee85b9cb06f2ac636a" },
   "grapple.nvim": { "branch": "main", "commit": "b41ddfc1c39f87f3d1799b99c2f0f1daa524c5f7" },

@@ -12,7 +12,7 @@ return
    opts = {
    },
    config = function()
-    require("blink-cmp").setup({
+    require("blink.cmp").setup({
      keymap = M.keymaps,
      completion = M.completion,
      sources = M.sources,
@@ -21,7 +21,7 @@ return
     })
     vim.api.nvim_create_autocmd({ "CursorMovedI", "TextChanged", "TextChangedI", "ModeChanged" }, {
      callback = function()
-      if M.in_comment_hide() then require("blink-cmp").hide() end
+      if M.in_comment_hide() then require("blink.cmp").hide() end
      end,
     })
    end,

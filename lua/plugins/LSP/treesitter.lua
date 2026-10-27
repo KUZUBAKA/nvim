@@ -22,6 +22,8 @@ return {
     "markdown_inline",
     "gdscript",
     "vimdoc",
+    "c",
+    "cpp",
    }
 
    require("nvim-treesitter").install(install_filetypes)

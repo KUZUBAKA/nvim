@@ -17,6 +17,7 @@ local colors = {
 
  skyblue = "#5eb0ee",
  skyblue_light = "#92c5ef",
+ skyblue_mint = "#23c7c8",
 
 
  magenta = "#bd8dfe",
@@ -65,7 +66,7 @@ local main_highlights = {
  NoiceCmdLinePopupBorder = { fg = colors.blue },
  NoiceCmdlinePopupBorderSearch = { fg = colors.yellow },
 
- WinSeparator = { fg = colors.blue },
+ WinSeparator = { fg = colors.skyblue_mint },
  Folded = { bg = "NONE" },
 
  -- # Text Colors
@@ -100,7 +101,7 @@ local main_highlights = {
  String = { fg = colors.green_light },
  ["@string"] = { link = "String" },
 
- Type = { fg = colors.blue },
+ Type = { fg = colors.skyblue_mint },
  Special = { fg = colors.green_light },
 
  Tag = { fg = colors.yellow },
@@ -112,7 +113,7 @@ local main_highlights = {
  ["@module.rust"] = { fg = colors.blue },
  ["@function.macro.rust"] = { link = "Function" }, 
  ["@lsp.type.macro.rust"] = { link = "Function" },
- ["@lsp.type.namespace.rust"] = { fg = colors.blue },
+ ["@lsp.type.namespace.rust"] = { fg = colors.skyblue_mint },
  ["@lsp.type.attributeBracket.rust"] = {fg = colors.green_verylight},
  ["@lsp.mod.attribute.rust"] = {link = "@lsp.type.attributeBracket.rust"},
  -- ["@lsp.type.string.rust"] = {fg = colors.skyblue},
@@ -130,8 +131,8 @@ local main_highlights = {
  ["@markup.heading.2"] = { fg = colors.red },
  ["@markup.heading.3"] = { fg = colors.orange },
  ["@markup.heading.4"] = { fg = colors.skyblue },
- ["@markup.heading.5"] = { fg = colors.blue },
- ["@markup.heading.6"] = { fg = colors.magenta },
+ ["@markup.heading.5"] = { fg = colors.magenta },
+ ["@markup.heading.6"] = { fg = colors.skyblue_mint },
  ["@markup.italic"] = { fg = colors.yellow },
  ["@markup.strong"] = { fg = colors.red_light },
  ["@markup.link.label.markdown_inline"] = { fg = colors.orange_dark },

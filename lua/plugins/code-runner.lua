@@ -2,17 +2,18 @@ return {
  "CRAG666/code_runner.nvim",
  event = "VeryLazy",
  keys = {
-  { "<leader>rr", function() require("code_runner").run_code() end, desc = "Code run" },
+  { "<leader>rr", function() require("code_runner").run_filetype() end, desc = "Code run" },
  },
  opts = {
+  prefix = "",
   mode = "toggleterm",
-  focus = true,
+  focus = false,
   float = {
    border = "rounded",
   },
   filetype = {
    python = "python -u",
-   rust = "cargo run",
+   rust = "cargo run$end",
   },
  },
 }

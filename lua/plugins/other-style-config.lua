@@ -27,6 +27,6 @@ return {
  },
  {
   "karb94/neoscroll.nvim",
-  opts = {},
+  opts = { stop_eof = false, },
  }
 }

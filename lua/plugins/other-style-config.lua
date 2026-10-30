@@ -24,5 +24,9 @@ return {
   "andersevenrud/nvim_context_vt",
   dependencies = { "nvim-treesitter/nvim-treesitter" },
   opts = { prefix = "<- " },
+ },
+ {
+  "karb94/neoscroll.nvim",
+  opts = {},
  }
 }

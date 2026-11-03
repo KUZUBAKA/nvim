@@ -15,7 +15,7 @@ return {
    end
   end
 
-  return { "lazydev", "lsp", "path", "snippets", "buffer", "ripgrep" }
+  return { "lazydev", "lsp", "path", "snippets", "ripgrep" }
  end,
  providers = {
   buffer = {

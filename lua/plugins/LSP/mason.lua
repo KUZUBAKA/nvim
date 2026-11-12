@@ -22,6 +22,7 @@ return {
      "cssls",
      "ruby_lsp",
      "sqlls",
+     "bashls",
     },
    })
 
@@ -51,6 +52,7 @@ return {
    vim.lsp.enable("gdscript")
    vim.lsp.enable("bedrock")
    vim.lsp.enable("sqlls")
+   vim.lsp.enable("bashls")
   end,
  },
  {

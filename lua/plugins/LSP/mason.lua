@@ -23,6 +23,7 @@ return {
      "ruby_lsp",
      "sqlls",
      "bashls",
+     "fish_lsp",
     },
    })
 
@@ -53,6 +54,7 @@ return {
    vim.lsp.enable("bedrock")
    vim.lsp.enable("sqlls")
    vim.lsp.enable("bashls")
+   vim.lsp.enable("fish_lsp")
   end,
  },
  {
